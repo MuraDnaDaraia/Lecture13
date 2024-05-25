@@ -1,0 +1,138 @@
+@import "_mixins";
+@import "_placeholders";
+@import "_reset";
+@import "_variables";
+body{
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+    width: 1500px;
+    overflow-x: hidden;
+}
+header{
+    @include goFlex(row, flex-start, center);
+    margin-top: 15px;
+    nav{
+        @include goFlex(row, space-around);
+        ul{
+            :first-child{
+                margin-left: 68px
+            }
+            @include goFlex(row, space-around);
+            li{
+                @include goFlex(row, space-around);
+                margin-right: 20px;
+            }
+        }
+    }
+}
+.main-h1{
+    margin-top: 25px;
+    margin-left: 68px;
+    margin-bottom: 25px;
+    font-size: $h1MainFontSize;
+}
+.main-h11{
+    margin-top: 140px;
+    margin-bottom: 25px;
+    margin-left: 68px;
+    font-size: $h1MainFontSize;
+}
+.section1{
+    @include goFlex(row, space-around);
+    div{
+        @include hwidth(362px, 250px);
+        @include goFlex(space-around,);
+        
+        > * {
+            margin-top: 20px;
+            margin-bottom: 20px; 
+        }  
+            div{
+                height: 16px;
+                img{ margin: 20px 0px;
+                    margin-right: 10px;
+                }
+            }         
+        
+
+        .background-img1{
+            background-image: url(../img/Rectangle\ 1.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            @include hwidth(382px, 186px);
+        }
+        .background-img2{
+            background-image: url(../img/Rectangle\ 3.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            @include hwidth(382px, 186px);
+        }
+        .background-img3{
+            background-image: url(../img/Rectangle\ 4.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            @include hwidth(382px, 186px);
+        }       
+    }
+
+}
+.section2{
+    @include goFlex(row, space-around,);
+    margin-bottom: 50px;
+    .section3{
+        :first-child{
+            background-image: url(../img/Rectangle\ 7\(1\).svg);
+            @include child-image(cover, center);
+            @include hwidth(758px, 430px);
+            @include goFlex(row, center, center);
+            p{
+                color: white;
+            }
+        }
+        :nth-child(2){
+            background-image: url(../img/Rectangle\ 8\(1\).svg);
+            @include child-image(cover, center);
+            @include hwidth(758px, 430px);
+            margin-top: 40px;
+        }
+    }
+    .section4{
+        :first-child{
+            background-image: url(../img/Rectangle\ 9.svg);
+            @include child-image(cover, center);
+            @include hwidth(362px, 212px);
+            margin-bottom: 100px;
+            margin-top: 30px;
+        }
+        :nth-child(2){
+            background-image: url(../img/Rectangle\ 10.svg);
+            @include child-image(cover, center);
+            @include hwidth(362px, 212px);
+            margin-bottom: 100px;
+        }
+        :last-child{
+            background-image: url(../img/Rectangle\ 11.svg);
+            @include child-image(cover, center);
+            @include hwidth(362px, 212px);
+        }
+    }
+}
+footer{
+    @include goFlex(row, space-around, center);
+    @include hwidth(1500px, 201px);
+    background-color: #243043;
+    div{
+        @include goFlex(column);
+        color:#818687;
+        p{
+            margin: 5px 0px;
+        }
+    }
+    .footerp{
+        color: white
+    }
+}
