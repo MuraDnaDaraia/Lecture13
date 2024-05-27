@@ -136,3 +136,11 @@ footer{
         color: white
     }
 }
+@media (max-width: 1024px){
+    body{
+        width: 1024px;
+    }
+    .section2{
+        @include goFlex(column);
+}
+}
