@@ -136,11 +136,35 @@ footer{
         color: white
     }
 }
-@media (max-width: 1024px){
+@media (max-width: $desktop-version){
     body{
         width: 1024px;
     }
-    .section2{
-        @include goFlex(column);
+    .s1div3{
+        margin-top: 100px;
+    }
+    footer{
+        width: 100%;
+    }
+    .section4{
+        @include goFlex(row, space-around, wrap);
+        :nth-child(2){
+            margin-top: 30px;
+        }
+    }
 }
+@media (max-width:$tablet-version){
+    body{
+        width: 768px;
+    }
+}
+@media (max-width:$mobile-version){
+    body{
+        width: 100vw;
+    }
+    .section1{
+        > * {
+           margin-bottom: 100px; 
+        }
+    }
 }
